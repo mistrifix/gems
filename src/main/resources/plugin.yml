@@ -1,6 +1,6 @@
 name: OutlastGems
 version: 1.0
-main: us.outlast.main.Outlast
+main: us.outlast.gems.Outlast
 api-version: 1.16
 commands:
   gems:

@@ -1,9 +1,9 @@
-package us.outlast.main.model;
+package us.outlast.gems.model;
 
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.main.data.PluginConfiguration;
-import us.outlast.main.util.ChatUtils;
+import us.outlast.gems.data.PluginConfiguration;
+import us.outlast.gems.util.ChatUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;

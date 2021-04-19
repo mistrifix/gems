@@ -1,7 +1,7 @@
-package us.outlast.main.data;
+package us.outlast.gems.data;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import us.outlast.main.Outlast;
+import us.outlast.gems.Outlast;
 
 public class PluginConfiguration {
 

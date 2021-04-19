@@ -1,9 +1,9 @@
-package us.outlast.main.model;
+package us.outlast.gems.model;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.main.Outlast;
+import us.outlast.gems.Outlast;
 
 import java.io.File;
 import java.math.BigInteger;

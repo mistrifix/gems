@@ -1,10 +1,10 @@
-package us.outlast.main.listener;
+package us.outlast.gems.listener;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import us.outlast.main.model.UserManager;
+import us.outlast.gems.model.UserManager;
 
 public class AuthListener implements Listener {
 

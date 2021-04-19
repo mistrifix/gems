@@ -1,4 +1,4 @@
-package us.outlast.main.util;
+package us.outlast.gems.util;
 
 import org.bukkit.ChatColor;
 import org.jetbrains.annotations.NotNull;

@@ -1,4 +1,4 @@
-package us.outlast.main.command;
+package us.outlast.gems.command;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -6,9 +6,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.main.model.User;
-import us.outlast.main.model.UserManager;
-import us.outlast.main.util.ChatUtils;
+import us.outlast.gems.model.User;
+import us.outlast.gems.model.UserManager;
+import us.outlast.gems.util.ChatUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;
