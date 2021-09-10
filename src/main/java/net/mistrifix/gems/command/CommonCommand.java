@@ -1,11 +1,11 @@
-package us.outlast.gems.command;
+package net.mistrifix.gems.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.gems.model.UserManager;
+import net.mistrifix.gems.model.UserManager;
 
 public class CommonCommand implements CommandExecutor {
 

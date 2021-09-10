@@ -1,9 +1,9 @@
-package us.outlast.gems.model;
+package net.mistrifix.gems.model;
 
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.gems.data.PluginConfiguration;
-import us.outlast.gems.util.ChatUtils;
+import net.mistrifix.gems.data.PluginConfiguration;
+import net.mistrifix.gems.util.ChatUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;
@@ -18,10 +18,8 @@ public class User {
 
     public User(@NotNull UUID uuid) {
         this.uuid = uuid;
-        if(PluginConfiguration.getInstance().startingGems > 0) {
-            this.balance = BigInteger.valueOf(PluginConfiguration.getInstance().startingGems);
-        }
-        this.balance = BigInteger.ZERO;
+        if(PluginConfiguration.getInstance().startingGems > 0) this.balance = BigInteger.valueOf(PluginConfiguration.getInstance().startingGems);
+        else this.balance = BigInteger.ZERO;
     }
 
     public UUID getUniqueId() {
@@ -39,7 +37,6 @@ public class User {
         final BigInteger remainingFunds = getBalance().subtract(cost);
         return remainingFunds.signum() >= 0;
     }
-
 
     public void executePayment(BigInteger cost) {
         if (canAfford(cost)) {

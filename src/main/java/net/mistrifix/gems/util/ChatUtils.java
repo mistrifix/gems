@@ -1,4 +1,4 @@
-package us.outlast.gems.util;
+package net.mistrifix.gems.util;
 
 import org.bukkit.ChatColor;
 import org.jetbrains.annotations.NotNull;

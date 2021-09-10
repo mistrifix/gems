@@ -1,9 +1,9 @@
-package us.outlast.gems.model;
+package net.mistrifix.gems.model;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.gems.Outlast;
+import net.mistrifix.gems.Main;
 
 import java.io.File;
 import java.math.BigInteger;
@@ -39,7 +39,7 @@ public class UserManager {
     }
 
     public static void insert(final @NotNull User user) {
-        File datafile = new File(Outlast.getInstance().getDataFolder() + File.separator + "users" + File.separator + user.getUniqueId() + ".yml");
+        File datafile = new File(Main.getInstance().getDataFolder() + File.separator + "users" + File.separator + user.getUniqueId() + ".yml");
         if(datafile.isDirectory()) {
             return;
         }
@@ -55,7 +55,7 @@ public class UserManager {
 
     public static @NotNull CompletableFuture<User> select(final @NotNull UUID uuid) {
         final CompletableFuture<User> future = new CompletableFuture<>();
-        File datafile = new File(Outlast.getInstance().getDataFolder() + File.separator + "users" + File.separator + uuid.toString() + ".yml");
+        File datafile = new File(Main.getInstance().getDataFolder() + File.separator + "users" + File.separator + uuid.toString() + ".yml");
         if(datafile.isDirectory()) {
             future.complete(null);
         }

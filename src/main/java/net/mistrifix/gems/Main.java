@@ -1,16 +1,17 @@
-package us.outlast.gems;
+package net.mistrifix.gems;
 
+import net.mistrifix.gems.model.UserManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import us.outlast.gems.command.AdminCommand;
-import us.outlast.gems.command.CommonCommand;
-import us.outlast.gems.data.PluginConfiguration;
-import us.outlast.gems.listener.AuthListener;
+import net.mistrifix.gems.command.AdminCommand;
+import net.mistrifix.gems.command.CommonCommand;
+import net.mistrifix.gems.data.PluginConfiguration;
+import net.mistrifix.gems.listener.AuthListener;
 
-public class Outlast extends JavaPlugin {
+public class Main extends JavaPlugin {
 
-    private static Outlast instance;
+    private static Main instance;
 
     public void onLoad() {
         if (!this.getDataFolder().exists()) {
@@ -33,9 +34,10 @@ public class Outlast extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        UserManager.getUsers().forEach(UserManager::insert);
     }
 
-    public static Outlast getInstance() {
-        return (instance != null ? instance : new Outlast());
+    public static Main getInstance() {
+        return instance;
     }
 }

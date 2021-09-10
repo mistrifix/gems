@@ -1,7 +1,7 @@
-package us.outlast.gems.data;
+package net.mistrifix.gems.data;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import us.outlast.gems.Outlast;
+import net.mistrifix.gems.Main;
 
 public class PluginConfiguration {
 
@@ -14,7 +14,7 @@ public class PluginConfiguration {
     }
 
     public void loadConfiguration() {
-        FileConfiguration config = Outlast.getInstance().getConfig();
+        FileConfiguration config = Main.getInstance().getConfig();
         startingGems = config.getInt("startingGems");
     }
 

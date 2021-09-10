@@ -1,4 +1,4 @@
-package us.outlast.gems.command;
+package net.mistrifix.gems.command;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -6,9 +6,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import us.outlast.gems.model.User;
-import us.outlast.gems.model.UserManager;
-import us.outlast.gems.util.ChatUtils;
+import net.mistrifix.gems.model.User;
+import net.mistrifix.gems.model.UserManager;
+import net.mistrifix.gems.util.ChatUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public class AdminCommand implements CommandExecutor {
             return false;
         }
         Player player = (Player) sender;
-        if(!player.hasPermission("outlast.gems.admin")) {
+        if(!player.hasPermission("gems.admin")) {
             player.sendMessage(ChatUtils.colored("&cYou cannot execute this command."));
             return false;
         }
@@ -55,7 +55,7 @@ public class AdminCommand implements CommandExecutor {
                     user.sendMessage("&6" + args[0] + " &cnot found.");
                     return;
                 }
-                if(!player.hasPermission("outlast.gems.viewothers")) {
+                if(!player.hasPermission("gems.viewothers")) {
                     player.sendMessage(ChatUtils.colored("&cYou cannot execute this command."));
                     return;
                 }
