@@ -1,6 +1,6 @@
-name: OutlastGems
+name: MGems
 version: 1.0
-main: us.outlast.gems.Outlast
+main: net.mistrifix.gems.Outlast
 api-version: 1.16
 commands:
   gems:
